@@ -46,7 +46,7 @@ $ cd whip/src
 $ php whip-cli.php
 ```
 
-Here's what it all looks like:
+Here it is in action:
 
 ```
 #######################################################
