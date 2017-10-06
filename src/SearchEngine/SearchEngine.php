@@ -8,7 +8,7 @@ namespace Slicvic\Whip\SearchEngine;
 class SearchEngine implements SearchEngineInterface
 {
     /**
-     * Data to search on.
+     * Data to search.
      *
      * @var array
      */
@@ -20,13 +20,20 @@ class SearchEngine implements SearchEngineInterface
     public function search(array $keywords, int $limit = 3)
     {
         if (empty($this->data) || !is_array($this->data)) {
-            throw new SearchEngineException('No data to search on!');
+            throw new SearchEngineException('No data to search!');
         }
 
+        // Trim keywords
+        foreach ($keywords as $k => $v) {
+            $keywords[$k] = trim($v);
+        }
+
+        // Do search
         $results = array_filter($this->data, function(array $row) use ($keywords) {
             return (count(array_intersect($keywords, $row['keywords'])) > 0);
         });
 
+        // Return findings
         $totalHits = count($results);
         $resultsLimitted = array_values(array_slice($results, 0, $limit));
 

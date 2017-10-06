@@ -6,7 +6,7 @@ use Slicvic\Whip\Cli\Output\OutputInterface;
 use Slicvic\Whip\Cli\Output\Output;
 
 /**
- * Class to read console input.
+ * Class to read command line input.
  */
 class Input implements InputInterface
 {

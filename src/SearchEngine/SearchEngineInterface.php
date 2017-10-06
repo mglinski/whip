@@ -8,7 +8,7 @@ namespace Slicvic\Whip\SearchEngine;
 interface SearchEngineInterface
 {
     /**
-     * Load JSON data to search on.
+     * Load JSON data to search.
      *
      * @param string $filename
      * @throws \Slicvic\Whip\SearchEngine\SearchEngineException

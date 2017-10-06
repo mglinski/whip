@@ -3,7 +3,7 @@
 namespace Slicvic\Whip\Cli\Input;
 
 /**
- * Interface to read console input.
+ * Interface to read command line input.
  */
 interface InputInterface
 {

@@ -3,12 +3,12 @@
 namespace Slicvic\Whip\Cli\Output;
 
 /**
- * Interface to write console output.
+ * Interface to write command line output.
  */
 interface OutputInterface
 {
     /**
-     * Write something to the console.
+     * Write something to the command-line.
      *
      * @param string $message
      * @return self

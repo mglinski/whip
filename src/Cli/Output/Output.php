@@ -3,7 +3,7 @@
 namespace Slicvic\Whip\Cli\Output;
 
 /**
- * Class to write console output.
+ * Class to write command line output.
  */
 class Output implements OutputInterface
 {
