@@ -197,7 +197,7 @@ class App
             if ($result->getTotalHits() > $this->input->limit) {
                 $this->outputter->say('    But you only asked for ' . $this->input->limit . " and that's all you get!");
             } else if ($result->getTotalHits() < $this->input->limit) {
-                $this->outputter->say('   You asked for ' . $this->input->limit . " but we can only give you that!");
+                $this->outputter->say('        You asked for ' . $this->input->limit . " but that's all we got!");
             } else {
                 $this->outputter->say("                 It's your lucky day!");
             }
