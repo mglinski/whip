@@ -17,7 +17,7 @@ class SearchEngine implements SearchEngineInterface
     /**
      * {@inheritdoc}
      */
-    public function search(array $keywords, int $maxResults = 3)
+    public function search(array $keywords, int $limit = 3)
     {
         if (empty($this->data) || !is_array($this->data)) {
             throw new SearchEngineException('No data to search on!');
@@ -28,7 +28,7 @@ class SearchEngine implements SearchEngineInterface
         });
 
         $totalHits = count($results);
-        $resultsLimitted = array_values(array_slice($results, 0, $maxResults));
+        $resultsLimitted = array_values(array_slice($results, 0, $limit));
 
         return new SearchResult($resultsLimitted, $totalHits);
     }

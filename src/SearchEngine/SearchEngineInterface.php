@@ -18,10 +18,10 @@ interface SearchEngineInterface
     /**
      * Find images by keywords.
      *
-     * @param  array   $keywords   List of keywords to match.
-     * @param  integer $maxResults Maximum number of results to return.
+     * @param  array   $keywords List of keywords to match.
+     * @param  integer $limit    Maximum number of results to return.
      * @return \Slicvic\Whip\SearchEngine\SearchResult
      * @throws \Slicvic\Whip\SearchEngine\SearchEngineException
      */
-    public function search(array $keywords, int $maxResults = 3);
+    public function search(array $keywords, int $limit = 3);
 }
