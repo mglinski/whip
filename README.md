@@ -39,13 +39,12 @@ $ composer install
 
 ## Usage
 To start whipping run the following in the command line and follow the prompt.
+Enjoy!
 
 ```sh
 $ cd whip/src
 $ php whip-cli.php
 ```
-
-Enjoy!
 
 Here's what it all looks like:
 
@@ -62,7 +61,7 @@ Keywords to match: (comma-separated, i.e. red, honda, 2017): honda,red
 
 #######################################################
         Woot woot! Total of 4 result(s) found!
-   You asked for 5 but we can only give you that!
+        You asked for 5 but that's all we got!
 #######################################################
 
 
