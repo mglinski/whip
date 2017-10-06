@@ -8,11 +8,20 @@ namespace Slicvic\Whip\SearchEngine;
 interface SearchEngineInterface
 {
     /**
+     * Load JSON data to search on.
+     *
+     * @param string $filename
+     * @throws \Slicvic\Whip\SearchEngine\SearchEngineException
+     */
+    public function loadData(string $filename);
+
+    /**
      * Find images by keywords.
      *
-     * @param  array   $keywords   A list of keywords to match.
+     * @param  array   $keywords   List of keywords to match.
      * @param  integer $maxResults Maximum number of results to return.
      * @return \Slicvic\Whip\SearchEngine\SearchResult
+     * @throws \Slicvic\Whip\SearchEngine\SearchEngineException
      */
-    public function search(string $filename, array $keywords, int $maxResults = 3);
+    public function search(array $keywords, int $maxResults = 3);
 }
