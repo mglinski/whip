@@ -14,5 +14,5 @@ interface SearchEngineInterface
      * @param  integer $maxResults Maximum number of results to return.
      * @return \Slicvic\Whip\SearchEngine\SearchResult
      */
-    public function search(array $keywords, int $maxResults = 3);
+    public function search(string $filename, array $keywords, int $maxResults = 3);
 }
