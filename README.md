@@ -54,9 +54,9 @@ Here it is in action:
 #######################################################
 
 
-Data file (leave blank for default) [/home/vagrant/Code/whip/src/../data/cars.json]:
-Number of images to display: 5
-Keywords to match: (comma-separated, i.e. red, honda, 2017): honda,red
+1) Data file (leave blank for default) [/home/vagrant/Code/whip/src/../data/cars.json]:
+2) Number of images to display: 5
+3) Keywords to match: (comma-separated, i.e. red, honda, 2017): honda,red
 
 
 #######################################################
