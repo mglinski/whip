@@ -88,7 +88,7 @@ class App
     private function promptForDataFile()
     {
         do {
-            $file = $this->inputter->ask("Data file (leave blank for default) [" . static::$defaultDataFile . ']:');
+            $file = $this->inputter->ask("1) Data file (leave blank for default) [" . static::$defaultDataFile . ']:');
 
             try {
                 $this->searchEngine->loadData($file ?: static::$defaultDataFile);
@@ -110,7 +110,7 @@ class App
     private function promptForNumberOfResults()
     {
         do {
-            $this->input->limit = $this->inputter->ask('Number of images to display:');
+            $this->input->limit = $this->inputter->ask('2) Number of images to display:');
             $isNumber = ctype_digit(strval($this->input->limit));
             $isGreaterThanZero = intval($this->input->limit) > 0;
 
@@ -132,7 +132,7 @@ class App
     {
         do {
             $this->input->keywords =
-                $this->inputter->ask('Keywords to match: (comma-separated, i.e. red, honda, 2017):');
+                $this->inputter->ask('3) Keywords to match: (comma-separated, i.e. red, honda, 2017):');
 
             if (!empty($this->input->keywords)) {
                 break;
