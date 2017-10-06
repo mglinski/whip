@@ -1,0 +1,17 @@
+{
+    "name": "slicvic/whip",
+    "description": "A sweet CLI tool to whip up keyword-related image ads.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Victor Lantigua",
+            "email": "vmlantigua@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Slicvic\\Whip\\": "src/"
+        }
+    }
+}
