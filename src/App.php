@@ -88,7 +88,7 @@ class App
     private function promptForDataFile()
     {
         do {
-            $file = $this->inputter->ask("Data file to search (leave blank for default) [" . static::$defaultDataFile . ']:');
+            $file = $this->inputter->ask("Data file (leave blank for default) [" . static::$defaultDataFile . ']:');
 
             try {
                 $this->searchEngine->loadData($file ?: static::$defaultDataFile);
@@ -185,15 +185,23 @@ class App
                 ->say("                   No results found!")
                 ->say("\n#######################################################\n")
                 ->say("\n\n");
+
             return;
         }
 
         $this->outputter
             ->say("\n")
             ->say("\n#######################################################\n")
-            ->say('        Woot woot! Found a total of ' . $result->getTotalHits() . ' result(s)!')
-            ->say("\n")
-            ->say('    But you asked for ' . $this->input->limit . ", and that's all you get!")
+            ->say('        Woot woot! Total of ' . $result->getTotalHits() . ' result(s) found!')
+            ->say("\n");
+            if ($result->getTotalHits() > $this->input->limit) {
+                $this->outputter->say('    But you only asked for ' . $this->input->limit . " and that's all you get!");
+            } else if ($result->getTotalHits() < $this->input->limit) {
+                $this->outputter->say('   You asked for ' . $this->input->limit . " but we can only give you that!");
+            } else {
+                $this->outputter->say("                 It's your lucky day!");
+            }
+        $this->outputter
             ->say("\n#######################################################\n")
             ->say("\n\n");
 
