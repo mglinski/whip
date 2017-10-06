@@ -83,7 +83,7 @@ class App
     }
 
     /**
-     * Prompt user for data source.
+     * Prompt user for data file.
      */
     private function promptForDataFile()
     {
@@ -105,7 +105,7 @@ class App
     }
 
     /**
-     * Prompt user for number of images to output.
+     * Prompt user for number of images to display.
      */
     private function promptForNumberOfResults()
     {
@@ -126,7 +126,7 @@ class App
     }
 
     /**
-     * Prompt user for image keywords.
+     * Prompt user for keywords to match.
      */
     private function promptForKeywords()
     {
