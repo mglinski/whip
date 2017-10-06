@@ -1,6 +1,6 @@
 # Whip
 
-A sweet CLI tool that whips up image ads for whatever keywords you choose. It's backed by a whopping 1Kb JSON data file, but can easily be extended to run off MySQL or any other database of your choice.
+A sweet CLI tool that whips up image ads for any keywords you choose. It's backed by a whopping 1Kb JSON data file, but can easily be extended to run off MySQL or any other database of your choice.
 
 ## Requirements
 
